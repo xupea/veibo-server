@@ -28,6 +28,11 @@ app.use(proxy('/api/feed/trendtop', {
   changeOrigin: true
 }))
 
+app.use(proxy('/api/container/getIndex', {
+  target: 'https://m.weibo.cn',
+  changeOrigin: true
+}))
+
 // middlewares
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
